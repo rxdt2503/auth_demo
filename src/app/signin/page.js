@@ -22,7 +22,7 @@ const Signin = () => {
         setLoading(false);
 
         if (result?.error) {
-            setError('Invalid credentials');
+            setError('Error: '+ result?.error);
         } else {
             router.push('/');
         }
