@@ -10,6 +10,8 @@ let client;
 let clientPromise;
 
 if (process.env.NODE_ENV === 'development') {
+
+    console.log('DEVELOPMENT')
     // In development mode, use a global variable so the MongoClient instance is not constantly refreshed.
     if (!global._mongoClientPromise) {
         client = new MongoClient(uri, options);
@@ -17,6 +19,8 @@ if (process.env.NODE_ENV === 'development') {
     }
     clientPromise = global._mongoClientPromise;
 } else {
+
+    console.log('PROD ')
     // In production mode, create a new client for every request.
     client = new MongoClient(uri, options);
     clientPromise = client.connect();
