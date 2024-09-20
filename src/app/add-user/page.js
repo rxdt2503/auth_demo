@@ -7,7 +7,7 @@ const AddUser = () => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [role, setRole] = useState('user');
+    const role= 'user';
     const [error, setError] = useState('');
     const router = useRouter();
 

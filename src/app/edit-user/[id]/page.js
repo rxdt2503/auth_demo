@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 
 const EditUser = ({ params }) => {
     const { id } = params;
-    const { data: session, status } = useSession();
+    const { data: status } = useSession();
     const [user, setUser] = useState(null);
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
