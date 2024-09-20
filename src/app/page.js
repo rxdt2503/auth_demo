@@ -19,7 +19,7 @@ const Home = () => {
     }, [status, router]);
 
     const fetchUsers = async () => {
-        const response = await fetch('/api/auth/users');
+        const response = await fetch('/api/auth/users', {cache: "reload"});
         const data = await response.json();
         setUsers(data);
     };
